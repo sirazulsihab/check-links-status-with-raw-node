@@ -1,7 +1,10 @@
-const sampleHandler = () => {};
+const handler = {};
 
-sampleHandler.handle = () => {
-    console.log('sample')
+handler.sampleHandler = (requestProperties, callback) => {
+    console.log(requestProperties)
+    callback(200, {
+        message:'This is Sample Route'
+    })
 };
 
-module.exports = sampleHandler;
+module.exports = handler;
